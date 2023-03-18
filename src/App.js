@@ -22,6 +22,14 @@ function App() {
     approveNftForAll();
   }, [frameAddress])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      window.location.reload();
+    }, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     fetchData();
