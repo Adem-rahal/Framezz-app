@@ -46,6 +46,7 @@ function App() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(framezzAddress, Framezz.abi, provider);
       try {
+        console.log("FRAME ADDRESS:", frameAddress);
         const frameInfo = await contract.frameInfo(frameAddress);
         if(frameInfo.nftId.toNumber() === 0) {
           const object = {
