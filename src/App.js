@@ -26,6 +26,8 @@ function App() {
     const interval = setInterval(() => {
       if (frameAddress === '') {
         connectWallet();
+        fetchData();
+        approveNftForAll();
       }
     }, 10000);
 
