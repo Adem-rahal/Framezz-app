@@ -58,6 +58,7 @@ function App() {
             'approvedNft': false
             }
             setData(object);
+            console.log("Object", object);
         }
         else {
           const NFTcontract = new ethers.Contract(frameInfo.nftSmartContractAddress, NFTabi, provider);
