@@ -22,17 +22,17 @@ function App() {
     approveNftForAll();
   }, [frameAddress])
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (frameAddress === '') {
-        connectWallet();
-        fetchData();
-        approveNftForAll();
-      }
-    }, 10000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (frameAddress === '') {
+  //       connectWallet();
+  //       fetchData();
+  //       approveNftForAll();
+  //     }
+  //   }, 10000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
